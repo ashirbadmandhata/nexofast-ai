@@ -1,29 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import './globals.css'
+import { Inter } from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "NexoAI",
-  description: "An advanced AI agent Which will help you to build seamless Webapplications.",
-};
+  title: 'NexoAI - Build Faster with AI',
+  description: 'AI-powered development platform for building and deploying web applications',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`${inter.className} min-h-screen bg-background font-sans antialiased`}>
         {children}
       </body>
     </html>
-  );
+  )
 }
+
