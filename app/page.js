@@ -44,13 +44,15 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Announcement Banner */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
-        <div className="container flex items-center justify-center gap-x-3 px-4 py-2 text-sm font-medium md:px-6">
-          <Sparkles className="h-4 w-4" />
-          <p>
-            Introducing AI-powered development. Start building faster
-            today(Ashirbad Mandhata).
-          </p>
+      <div className="relative bg-gradient-to-r from-blue-600 to-emerald-600 text-white overflow-hidden">
+        <div className="container flex items-center gap-x-3 px-4 py-2 text-sm font-medium md:px-6">
+          <Sparkles className="h-4 w-4 flex-shrink-0" />
+          <div className="relative w-full overflow-hidden">
+            <div className="animate-scroll whitespace-nowrap">
+              Introducing AI-powered development. Start building faster today
+              (Developed by Ashirbad Mandhata). The website is under development some of the Functionalities My not works Stay tuned we will be back Soon.
+            </div>
+          </div>
           <X className="absolute right-4 h-4 w-4 cursor-pointer opacity-70 hover:opacity-100" />
         </div>
       </div>

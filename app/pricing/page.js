@@ -1,6 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2 } from 'lucide-react'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
+// import { BorderBeam } from "@/components/ui/border-beam";
 
 export default function PricingPage() {
   const features = {
@@ -9,7 +10,7 @@ export default function PricingPage() {
       "Basic templates",
       "Community support",
       "1GB storage",
-      "Basic analytics"
+      "Basic analytics",
     ],
     pro: [
       "Unlimited projects",
@@ -19,7 +20,7 @@ export default function PricingPage() {
       "Advanced analytics",
       "Custom domains",
       "Team collaboration",
-      "API access"
+      "API access",
     ],
     enterprise: [
       "Everything in Pro",
@@ -29,23 +30,29 @@ export default function PricingPage() {
       "Enterprise security",
       "SLA guarantee",
       "Dedicated success manager",
-      "Custom contracts"
-    ]
-  }
+      "Custom contracts",
+    ],
+  };
 
   return (
     <div className="flex min-h-screen flex-col">
       <div className="container px-4 md:px-6 py-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Simple, transparent pricing</h1>
-          <p className="mt-4 text-muted-foreground md:text-xl">Choose the plan that's right for you</p>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Simple, transparent pricing
+          </h1>
+          <p className="mt-4 text-muted-foreground md:text-xl">
+            Choose the plan that's right for you
+          </p>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8 mt-12">
           {/* Free Plan */}
           <div className="relative flex flex-col rounded-2xl border bg-card p-6 shadow-lg transition-shadow hover:shadow-xl">
             <div className="mb-4">
               <h3 className="text-xl font-bold">Free</h3>
-              <p className="text-sm text-muted-foreground">Perfect for side projects</p>
+              <p className="text-sm text-muted-foreground">
+                Perfect for side projects
+              </p>
             </div>
             <div className="mb-4 flex items-baseline">
               <span className="text-4xl font-bold">$0</span>
@@ -59,7 +66,9 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Button className="mt-auto" variant="outline">Get Started</Button>
+            <Button className="mt-auto" variant="outline">
+              Get Started
+            </Button>
           </div>
 
           {/* Pro Plan */}
@@ -71,7 +80,9 @@ export default function PricingPage() {
             </div>
             <div className="mb-4">
               <h3 className="text-xl font-bold">Pro</h3>
-              <p className="text-sm text-muted-foreground">Perfect for growing teams</p>
+              <p className="text-sm text-muted-foreground">
+                Perfect for growing teams
+              </p>
             </div>
             <div className="mb-4 flex items-baseline">
               <span className="text-4xl font-bold">$29</span>
@@ -85,14 +96,19 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Button className="mt-auto bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
+            <Button className="mt-auto bg-primary text-primary-foreground hover:bg-primary/90">
+              Get Started
+            </Button>
+            {/* <BorderBeam size={250} duration={12} delay={9} /> */}
           </div>
 
           {/* Enterprise Plan */}
           <div className="relative flex flex-col rounded-2xl border bg-card p-6 shadow-lg transition-shadow hover:shadow-xl">
             <div className="mb-4">
               <h3 className="text-xl font-bold">Enterprise</h3>
-              <p className="text-sm text-muted-foreground">Custom solutions for large teams</p>
+              <p className="text-sm text-muted-foreground">
+                Custom solutions for large teams
+              </p>
             </div>
             <div className="mb-4 flex items-baseline">
               <span className="text-4xl font-bold">Custom</span>
@@ -105,11 +121,12 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Button className="mt-auto" variant="outline">Contact Sales</Button>
+            <Button className="mt-auto" variant="outline">
+              Contact Sales
+            </Button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
